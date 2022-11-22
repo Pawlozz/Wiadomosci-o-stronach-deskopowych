@@ -2,48 +2,43 @@
   <div>
     <router-view class="mainPage" />
     <div class="menu">
-      <router-link to='/'><img src="./assets/logo.png" alt="Logo strony"></router-link>
+      <router-link to="/"
+        ><img src="./assets/logo.png" alt="Logo strony"
+      /></router-link>
       <ol>
         <li>
-          <router-link to="/"><span class="material-symbols-outlined">
-              home
-            </span>
+          <router-link to="/"
+            ><span class="material-symbols-outlined"> home </span>
             <h1>Strona główna</h1>
           </router-link>
         </li>
         <li>
           <router-link to="/workspace">
-            <span class="material-symbols-outlined">
-              download
-            </span>
+            <span class="material-symbols-outlined"> download </span>
             <h1>Środowisko pracy</h1>
           </router-link>
         </li>
         <li>
           <router-link to="/csharp">
-            <span class="material-symbols-outlined">
-              code
-            </span>
+            <span class="material-symbols-outlined"> code </span>
             <h1>Przykładowe kody</h1>
           </router-link>
         </li>
         <li>
           <router-link to="/xaml">
-            <span class="material-symbols-outlined">
-              design_services
-            </span>
+            <span class="material-symbols-outlined"> design_services </span>
             <h1>Xaml</h1>
-
           </router-link>
         </li>
       </ol>
     </div>
+    <BackgroundImage />
   </div>
 </template>
 <script>
-export default {
+import BackgroundImage from './components/BackgroundImage.vue';
 
-}
+export default { components: { BackgroundImage } };
 </script>
 <style lang="scss">
 * {
@@ -53,12 +48,16 @@ export default {
   font-family: 'Roboto', sans-serif;
 }
 
-.mainPage {
-  width: 100%;
-  height: 90vh;
-  background: url(./assets/back.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+h1 {
+  color: #ffffff;
+  font-size: 3rem;
+  background-color: #007800;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+}
+h2 {
+  color: #05930c;
+  padding: 1rem 2rem;
 }
 
 .menu {
@@ -97,9 +96,15 @@ export default {
       &:hover {
         background-color: #7cbf7f;
       }
-
+      &:hover > h1 {
+        color: rgb(67, 67, 67);
+      }
       h1 {
         padding: 0 1rem;
+        font-size: 2rem;
+        transition: color 0.5s;
+        color: #007800;
+        background: none;
       }
     }
   }
@@ -124,5 +129,50 @@ export default {
 
 body {
   background-color: rgb(255, 255, 255);
+}
+hr {
+  width: 80%;
+  margin: 1rem 0;
+  height: 0.15rem;
+  background: rgb(57, 57, 57);
+  border: rgb(57, 57, 57) solid 1px;
+}
+article {
+  margin: 2rem;
+  width: 80%;
+}
+ul {
+  width: 75%;
+  list-style-type: none;
+  border-radius: 15px;
+  overflow-x: hidden;
+  max-height: 30rem;
+  li {
+    background-color: rgb(57, 57, 57);
+    color: #ffffff;
+    padding: 0.6rem;
+    padding-left: 5rem;
+    position: relative;
+    counter-increment: code;
+    &::before {
+      content: counter(code) '.';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 4rem;
+      background-color: #007800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+  }
+}
+p {
+  color: #333;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  width: 80%;
 }
 </style>
