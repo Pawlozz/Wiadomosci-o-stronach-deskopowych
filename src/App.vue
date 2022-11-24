@@ -178,5 +178,6 @@ p {
 ol {
   font-size: 1.6rem;
   color: #333;
+  width: 80%;
 }
 </style>
