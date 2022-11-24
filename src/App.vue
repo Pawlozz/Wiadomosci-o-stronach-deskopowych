@@ -175,4 +175,8 @@ p {
   font-size: 1.2rem;
   width: 80%;
 }
+ol {
+  font-size: 1.6rem;
+  color: #333;
+}
 </style>
