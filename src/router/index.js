@@ -21,7 +21,7 @@ const routes = [
     component: xaml,
   },
   {
-    path: '/csharp',
+    path: '/workspace',
     name: 'CsharpBasics',
     component: CsharpBasics,
   },
