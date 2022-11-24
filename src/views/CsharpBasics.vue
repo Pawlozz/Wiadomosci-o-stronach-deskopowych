@@ -16,7 +16,8 @@
       </article>
     </section>
     <button>
-      <span class="material-symbols-outlined"> download </span>&emsp; Pobierz
+      <a href='https://visualstudio.microsoft.com/pl/thank-you-downloading-visual-studio/?sku=Community&channel=Release&version=VS2022&source=VSLandingPage&cid=2030&passive=false'
+        target='_blank'><span class="material-symbols-outlined"> download </span>&emsp; Pobierz</a>
     </button>
   </div>
 </template>
@@ -32,32 +33,38 @@ export default {};
   align-items: center;
   padding: 5rem;
   justify-content: space-around;
+
   img {
     width: 20%;
     border-right: 2px solid #bc8bf3;
     padding-right: 2rem;
   }
+
   header {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
+
 .row {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80%;
+
   h1 {
     background-color: transparent;
     color: #bc8bf3;
     padding: 0;
   }
+
   h3 {
     font-size: 1.8rem;
     color: #683c9a;
   }
 }
+
 button {
   padding: 1rem 3rem;
   font-size: 2rem;
@@ -71,9 +78,11 @@ button {
   transition: background 0.5s;
   margin-top: 3rem;
   cursor: pointer;
+
   &:hover {
     background-color: #683c9a;
   }
+
   span {
     scale: 1.5;
   }

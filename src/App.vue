@@ -187,4 +187,9 @@ ol {
   color: #333;
   width: 80%;
 }
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
 </style>
