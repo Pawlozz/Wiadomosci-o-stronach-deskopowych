@@ -9,7 +9,7 @@
       nadrzędny-podrzędny
     </p>
     <h2>Język XAML ma kilka zalet w porównaniu z kodem równoważnym:</h2>
-    <ul>
+    <ol>
       <li>
         Kod XAML jest często bardziej zwięzły i czytelny niż równoważny kod.
       </li>
@@ -23,12 +23,12 @@
         nadaje się do narzędzi i generowany przez narzędzia do projektowania
         wizualnego.
       </li>
-    </ul>
+    </ol>
     <h2>
       Istnieją również wady, głównie związane z ograniczeniami, które są
       wewnętrzne dla języków znaczników:
     </h2>
-    <ul>
+    <ol>
       <li>
         XAML nie może zawierać kodu. Wszystkie programy obsługi zdarzeń muszą
         być zdefiniowane w pliku kodu.
@@ -46,6 +46,10 @@
         Język XAML zazwyczaj nie może wywoływać metod. (To ograniczenie może
         czasami zostać pokonane).
       </li>
+    </ol>
+    <h2>Tu można zobaczyć przykładowy kod guzików xaml11</h2>
+    <ul>
+      <li></li>
     </ul>
   </div>
 </template>
@@ -54,4 +58,13 @@ export default {
   name: 'xamlView',
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.homeWrapper {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+</style>

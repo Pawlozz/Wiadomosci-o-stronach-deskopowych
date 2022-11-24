@@ -2,13 +2,10 @@
   <div>
     <router-view class="mainPage" />
     <div class="menu">
-      <router-link to="/"
-        ><img src="./assets/logo.png" alt="Logo strony"
-      /></router-link>
+      <router-link to="/"><img src="./assets/logo.png" alt="Logo strony" /></router-link>
       <ol>
         <li>
-          <router-link to="/"
-            ><span class="material-symbols-outlined"> home </span>
+          <router-link to="/"><span class="material-symbols-outlined"> home </span>
             <h1>Strona główna</h1>
           </router-link>
         </li>
@@ -19,7 +16,7 @@
           </router-link>
         </li>
         <li>
-          <router-link to="/csharp">
+          <router-link to="/codes">
             <span class="material-symbols-outlined"> code </span>
             <h1>Przykładowe kody</h1>
           </router-link>
@@ -55,6 +52,7 @@ h1 {
   padding: 1rem 2rem;
   border-radius: 10rem;
 }
+
 h2 {
   color: #05930c;
   padding: 1rem 2rem;
@@ -96,9 +94,11 @@ h2 {
       &:hover {
         background-color: #7cbf7f;
       }
-      &:hover > h1 {
+
+      &:hover>h1 {
         color: rgb(67, 67, 67);
       }
+
       h1 {
         padding: 0 1rem;
         font-size: 2rem;
@@ -130,6 +130,7 @@ h2 {
 body {
   background-color: rgb(255, 255, 255);
 }
+
 hr {
   width: 80%;
   margin: 1rem 0;
@@ -137,16 +138,19 @@ hr {
   background: rgb(57, 57, 57);
   border: rgb(57, 57, 57) solid 1px;
 }
+
 article {
   margin: 2rem;
   width: 80%;
 }
+
 ul {
   width: 75%;
   list-style-type: none;
   border-radius: 15px;
   overflow-x: hidden;
   max-height: 30rem;
+
   li {
     background-color: rgb(57, 57, 57);
     color: #ffffff;
@@ -154,6 +158,7 @@ ul {
     padding-left: 5rem;
     position: relative;
     counter-increment: code;
+
     &::before {
       content: counter(code) '.';
       position: absolute;
@@ -169,12 +174,14 @@ ul {
     }
   }
 }
+
 p {
   color: #333;
   padding: 1rem 2rem;
   font-size: 1.2rem;
   width: 80%;
 }
+
 ol {
   font-size: 1.6rem;
   color: #333;
