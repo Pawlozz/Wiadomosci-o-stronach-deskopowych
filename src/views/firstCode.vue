@@ -28,9 +28,6 @@
       <li>{</li>
       <li>Console.WriteLine(ex.Message);</li>
       <li>}</li>
-      <li></li>
-      <li></li>
-      <li></li>
     </ul>
     <h2>Tak działa ten kod kalkulatora</h2>
     <img src='../assets/calc.png' />
